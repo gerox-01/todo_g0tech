@@ -85,7 +85,7 @@ class FormLoginState extends State<FormLogin> {
               ),
             )
           ),
-          const FieldEmail(),
+          const FieldUser(),
           Container(
             margin: EdgeInsets.symmetric(vertical: size.height * 0.02),
             child: Text(
@@ -132,8 +132,8 @@ class FormLoginState extends State<FormLogin> {
   }
 }
 
-class FieldEmail extends StatelessWidget {
-  const FieldEmail({Key? key}) : super(key: key);
+class FieldUser extends StatelessWidget {
+  const FieldUser({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

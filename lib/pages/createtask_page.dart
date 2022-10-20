@@ -51,9 +51,14 @@ class CreateTaskPageState extends State<CreateTaskPage> {
                     maxLines: 2,
                     decoration: InputDecoration(
                       border: UnderlineInputBorder(),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color.fromRGBO(5, 59, 167, 1)),
+                      ),
                       labelText: 'Tarea:',
+                      labelStyle: TextStyle(color: Color.fromRGBO(5, 59, 167, 1)),
                     ),
                     textInputAction: TextInputAction.done,
+                    cursorColor: Color.fromRGBO(5, 59, 167, 1),
                   ),
                 ),
                 Padding(padding: EdgeInsets.only(top: size.height * 0.02)),

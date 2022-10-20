@@ -23,10 +23,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: CacheProvider.signIn ? 'home' : 'login',
       routes: {
-        'login': (BuildContext context) => const LoginPage(),
+        'login': (BuildContext context) => const LoginPage(), 
         'home': (BuildContext context) => const HomePage(),
         'register': (BuildContext context) => const RegisterPage(),
         'createTask': (BuildContext context) => const CreateTaskPage(),
+        'done': (BuildContext context) => const CompleteTaskPage(),
+        'profile': (BuildContext context) => const ProfilePage(),
       },
       debugShowCheckedModeBanner: false,
       title: 'ToDo G0tech',

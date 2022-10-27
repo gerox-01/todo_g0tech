@@ -44,30 +44,67 @@ class HomePageState extends State<HomePage> {
                 ),
                 Padding(padding: EdgeInsets.symmetric(vertical: size.height * 0.02)),
                 // Cards con una lista de radio buttons
-                SizedBox(
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   height: size.height * 0.75,
                   child: SingleChildScrollView(
                     child: ListView.builder(
-                      shrinkWrap: true,
-                      physics: const NeverScrollableScrollPhysics(),
-                      itemCount: 20,
-                      itemBuilder: (BuildContext context, int index) {
-                        return Card(
-                          color: Colors.white,
-                          child: ListTile(
-                            title: Text('Tarea $index'),
-                            leading: Radio(
-                              value: index,
-                              groupValue: 21,
-                              onChanged: (int? value) {
-                                setState(() {
-                                });
-                              },
-                            ),
+                            shrinkWrap: true,
+                            physics: const NeverScrollableScrollPhysics(),
+                            itemCount: 20,
+                            itemBuilder: (BuildContext context, int index) {
+                              return Card(
+                                color: Colors.white,
+                                child: ListTile(
+                                  title: Text('Tarea $index'),
+                                  leading: Radio(
+                                    value: index,
+                                    groupValue: 1,
+                                    onChanged: (int? value) {
+                                      setState(() {
+
+                                      });
+                                    },
+                                  ),
+                                ),
+                              );
+                            },
                           ),
-                        );
-                      },
-                    ),
+
+                          // TODO: como se haría con el servicio
+                    // child: FutureBuilder(
+                    //   future: _getTasks(),
+                    //   builder: (context, snapshot) {
+                    //     if(snapshot.hasData){
+                    //       final List tasks = snapshot.data as List;
+
+                    //       return ListView.builder(
+                    //         shrinkWrap: true,
+                    //         physics: const NeverScrollableScrollPhysics(),
+                    //         itemCount: tasks.length,
+                    //         itemBuilder: (BuildContext context, int index) {
+                    //           return Card(
+                    //             color: Colors.white,
+                    //             child: ListTile(
+                    //               title: Text(tasks[index]['title']),
+                    //               leading: Radio(
+                    //                 value: index,
+                    //                 groupValue: 1,
+                    //                 onChanged: (int? value) {
+                    //                   setState(() {
+
+                    //                   });
+                    //                 },
+                    //               ),
+                    //             ),
+                    //           );
+                    //         },
+                    //       );
+                    //     }else{
+                    //       return const Center(child: CircularProgressIndicator());
+                    //     }
+                    //   },
+                    // ),
                   ),
                 ),
               ],

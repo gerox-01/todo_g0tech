@@ -107,7 +107,7 @@ class FormRegisterState extends State<FormRegister> {
               ),
               validator: (value) {
                 if (value == null || value.isEmpty) {
-                  return 'Por favor, ingrese su nombre';
+                  return 'Por favor, ingrese su nombre.';
                 }
                 return null;
               },
@@ -146,7 +146,7 @@ class FormRegisterState extends State<FormRegister> {
               ),
               validator: (value) {
                 if (value == null || value.isEmpty) {
-                  return 'Please enter some text';
+                  return 'Por favor, ingrese su nombre.';
                 }
                 return null;
               },
@@ -185,7 +185,7 @@ class FormRegisterState extends State<FormRegister> {
               ),
               validator: (value) {
                 if (value == null || value.isEmpty) {
-                  return 'Please enter some text';
+                  return 'Por favor, ingrese su correo.';
                 }
                 return null;
               },
@@ -224,7 +224,7 @@ class FormRegisterState extends State<FormRegister> {
               ),
               validator: (value) {
                 if (value == null || value.isEmpty) {
-                  return 'Please enter some text';
+                  return 'Por favor, ingrese su contraseña.';
                 }
                 return null;
               },
@@ -264,7 +264,7 @@ class FormRegisterState extends State<FormRegister> {
               ),
               validator: (value) {
                 if (value == null || value.isEmpty) {
-                  return 'Please enter some text';
+                  return 'Por favor, confirme su contraseña.';
                 }
                 return null;
               },

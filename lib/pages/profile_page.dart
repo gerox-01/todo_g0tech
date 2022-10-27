@@ -3,9 +3,26 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:todoapp_tech/widgets/appbar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:todoapp_tech/widgets/drawer.dart';
+import 'package:todoapp_tech/service/api_service.dart';
 
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
+
+  @override
+  _ProfilePageState createState() => _ProfilePageState();
+}
+
+
+class _ProfilePageState extends State<ProfilePage> {
+  // final PersonModel persona;
+
+  void initState() {
+    super.initState();
+    ApiService.getPersona().then((value) {
+      // persona = value;
+      print(value);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {

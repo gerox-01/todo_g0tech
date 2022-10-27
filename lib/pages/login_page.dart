@@ -110,6 +110,7 @@ class FormLoginState extends State<FormLogin> {
                     const SnackBar(content: Text('Procesando datos...'))
                   );
                   CacheProvider.signIn = true;
+                  // pop [2], push [1,2,3,]
                   Navigator.pushNamed(context, 'home');
                 }
               },

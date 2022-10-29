@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todoapp_tech/service/cache_provider.dart';
+import 'package:todoapp_tech/service/database_service.dart';
 import 'package:todoapp_tech/widgets/button_primary.dart';
 
 
@@ -58,6 +59,7 @@ class AppDrawerWidget extends StatelessWidget {
             margin: EdgeInsets.symmetric(horizontal: size.width * 0.1),
             child: ButtonStyleWidget(text: 'Cerrar sesión', onPressed: () {
               Navigator.pushNamed(context, 'login');
+              DatabaseService.deleteDatabase();
               CacheProvider.signIn = false;
             }),
           ),

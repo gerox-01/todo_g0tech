@@ -1,7 +1,6 @@
 # Todo App G0Tech
 
 Bienvenido a este gran proyecto! Un To-Do.
-El proyecto esta en la *rama develop*, por lo que si quieres ver el estado del proyecto, debes cambiar a la rama develop.
 
 ## Antes de empezar
 
